@@ -54,7 +54,7 @@
 // off - close
 // on - open
 // btn.addEventListener('click',function(){
-  
+
 //   btn.textContent = btn.textContent === 'off' ? 'on' : 'off'
 //   content.textContent = btn.textContent === 'off' ? 'close' : 'open'
 //   content.style.backgroundColor = btn.textContent === 'off'?'pink ':'lime'
@@ -89,17 +89,31 @@
 //   btn.style.width = "200px";
 // });
 
+// const small1 = document.getElementById('small1');
+// const small2 = document.getElementById('small2');
+// const small3 = document.getElementById('small3');
 
+// const big = document.getElementById('big');
 
-const small1 = document.getElementById('small1');
-const small2 = document.getElementById('small2');
-const small3 = document.getElementById('small3');
+// small1.addEventListener('click',function(){
+//   big.src = small1.src;
+// })
+// small2.addEventListener('click',function(){
+//   big.src = small2.src;
+// })
 
-const big = document.getElementById('big');
+const bigImg = document.getElementById("big");
 
-small1.addEventListener('click',function(){
-  big.src = small1.src;
-})
-small2.addEventListener('click',function(){
-  big.src = small2.src;
-})
+//HTMLCollection
+const smallImgs = document.getElementsByClassName("small");
+
+//перебираємо колекцію forof
+// for (const element of HTMLCollection) {
+//   element
+// }
+
+for (const smallImg of smallImgs) {
+  smallImg.addEventListener("click", () => {
+    bigImg.src = smallImg.src;
+  });
+}
