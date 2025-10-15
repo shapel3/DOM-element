@@ -102,18 +102,37 @@
 //   big.src = small2.src;
 // })
 
-const bigImg = document.getElementById("big");
+// const bigImg = document.getElementById("big");
 
-//HTMLCollection
-const smallImgs = document.getElementsByClassName("small");
+// //HTMLCollection
+// const smallImgs = document.getElementsByClassName("small");
 
-//перебираємо колекцію forof
-// for (const element of HTMLCollection) {
-//   element
+// //перебираємо колекцію forof
+// // for (const element of HTMLCollection) {
+// //   element
+// // }
+
+// for (const smallImg of smallImgs) {
+//   smallImg.addEventListener("click", () => {
+//     bigImg.src = smallImg.src;
+//   });
 // }
 
-for (const smallImg of smallImgs) {
-  smallImg.addEventListener("click", () => {
-    bigImg.src = smallImg.src;
-  });
-}
+
+// const lisFruites = document.getElementsByTagName('li');
+// for (const li of lisFruites) {
+//   li.addEventListener('click',() => {
+//     li.style.backgroundColor = li.style.backgroundColor === 'pink' ? '' : 'pink';
+//   });
+// }
+
+
+
+// const buttons = document.getElementsByClassName('btn');
+
+// for (const button of buttons) {
+//   button.style.backgroundColor = button.textContent;
+//   button.addEventListener('click',()=>{
+//     block.style.backgroundColor = button.textContent;
+//   });
+// }
