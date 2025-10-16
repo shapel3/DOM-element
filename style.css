@@ -27,7 +27,20 @@
 } */
 
 
-.block{
+/* .block{
     min-height: 200px ;
     border: 2px solid #aaa;
+} */
+
+
+#block > h2 {
+    background-color: blueviolet;
 }
+
+/* #block > ol > li:first-child{
+    background-color: pink;
+}
+
+#block > ol > li:last-child{
+    background-color: pink;
+} */
