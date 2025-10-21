@@ -151,41 +151,67 @@
 //   })
 // }
 
-const h2Block = document.querySelector("#block > h2");
-console.dir(h2Block);
-h2Block.style.color = "white";
+// const h2Block = document.querySelector("#block > h2");
+// console.dir(h2Block);
+// h2Block.style.color = "white";
 
-console.dir(document.getElementsByClassName('btn'))
+// console.dir(document.getElementsByClassName('btn'))
+
+// const btnsBlock = document.querySelectorAll('#block > .btn');
+// console.dir(btnsBlock)
+// btnsBlock.forEach((element)=> {
+//   element.style.backgroundColor = 'yeallow'
+// })
+
+// for (const element of btnsBlock) {
+//   element.style.fontSize = '16px'
+// }
+
+// const lis = document.querySelectorAll('ol>li')
+// console.dir(lis)
+// lis.forEach(li => {
+//   li.addEventListener('click',()=>{
+//     li.textContent
+//   })
+// })
+
+// document.querySelector('#block > ol > li:first-child').style.backgroundColor = 'pink'
+
+// document.querySelector('#block > ol > li:last-child').style.backgroundColor = 'pink'
+
+// const buttons = document.querySelectorAll("button");
+// console.dir(buttons);
+
+// for (const btn of buttons) {
+//   btn.classList.add('btn','shadow');
+//   btn.addEventListener('mouseenter',()=>{
+//     btn.classList.add('active')
+//   })
+//   btn.addEventListener('mouseout',()=>{
+//     btn.classList.remove('active')
+//   })
+//   btn.addEventListener('click',()=>{
+//     btn.classList.toggle('shadow')
+//   })
+// }
+
+// const block = document.getElementById('block')
+// block.addEventListener('click',()=>{
+//   block.classList.toggle('big-text')
+// })
+
+const button = document.querySelector("#block > button");
+const img = document.querySelector("#block > img");
+
+button.addEventListener("click", () => {
+  img.classList.toggle("hide");
+  button.textContent =
+    button.textContent === "show picture" ? "hide piture" : "show picture";
+});
 
 
-const btnsBlock = document.querySelectorAll('#block > .btn');
-console.dir(btnsBlock)
-btnsBlock.forEach((element)=> {
-  element.style.backgroundColor = 'yeallow'
+const btnTheme = document.querySelector('button:first-of-type');
+btnTheme.addEventListener('click',()=>{
+  btnTheme.textContent = btnTheme.textContent === 'light'? 'dark':'light'
+  document.body.classList.toggle('dark')
 })
-
-for (const element of btnsBlock) {
-  element.style.fontSize = '16px'
-}
-
-
-
-
-
-
-const lis = document.querySelectorAll('ol>li')
-console.dir(lis)
-lis.forEach(li => {
-  li.addEventListener('click',()=>{
-    li.textContent
-  })
-})
-
-
-
-
-
-document.querySelector('#block > ol > li:first-child').style.backgroundColor = 'pink'
-
-
-document.querySelector('#block > ol > li:last-child').style.backgroundColor = 'pink'

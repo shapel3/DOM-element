@@ -33,9 +33,9 @@
 } */
 
 
-#block > h2 {
+/* #block > h2 {
     background-color: blueviolet;
-}
+} */
 
 /* #block > ol > li:first-child{
     background-color: pink;
@@ -44,3 +44,37 @@
 #block > ol > li:last-child{
     background-color: pink;
 } */
+
+
+/* .btn{
+    border: none;
+    font-size: 20px;
+    color: violet;
+    box-shadow: 1px 1px 3px black;
+}
+.active{
+    background-color: pink;
+}
+
+.shadow{
+    box-shadow: inset 1px 1px 3px black;
+} */
+
+/* .big-text{
+    font-size: 30px;
+} */
+
+img{
+    width:100%
+}
+.hide{
+    display: none;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+button{
+    background-color: inherit;
+    color: inherit;
+}
