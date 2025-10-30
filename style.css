@@ -1,18 +1,10 @@
-body {
-  margin: 0;
+#shop{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-
-#wrapper {
-  width: 100%;
-  height: 100vh;
-  background-color: aquamarine;
-  position: relative;
-  /* cursor: none; */
-}
-#block {
-  width: 20px;
-  height: 20px;
-  background-image: url(./assets/images/cursor-default-outline.png);
-  background-size: cover;
-  position: absolute;
+.product{
+    border: 2px solid pink;
+    padding: 10px;
+    margin-bottom: 10px;
 }
