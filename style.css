@@ -1,18 +1,18 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-#wrapper{
-    width: 100%;
-    height: 100vh;
-    background-color: aquamarine;
-    position: relative;
-    cursor: none;
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: aquamarine;
+  position: relative;
+  /* cursor: none; */
 }
-#block{
-    width: 20px;
-    height: 20px;
-    /* background-image: url(./assets/images/cursor-default-outline.png); */
-    background-size: cover;
-    position: absolute;
+#block {
+  width: 20px;
+  height: 20px;
+  background-image: url(./assets/images/cursor-default-outline.png);
+  background-size: cover;
+  position: absolute;
 }

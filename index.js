@@ -6,22 +6,30 @@ const block = document.getElementById("block");
 //    block.style.top = event.clientY + 'px'
 // })
 
+let x = 0;
+let y = 0;
+const step = 5
+
 window.addEventListener("keydown", (event) => {
   console.log(event);
   if (event.key === "ArrowLeft") {
     console.log("left");
+    x-=step;
   }
   if (event.key === "ArrowRight") {
     console.log("right");
+    x+=step;
   }
-  if (event.key === 'ArrowUp') {
-    console.log('top');
-    
+  if (event.key === "ArrowUp") {
+    console.log("top");
+    y-=step;
   }
-   if (event.key === 'ArrowDown') {
-    console.log('down');
-    
+  if (event.key === "ArrowDown") {
+    console.log("down");
+    y+=step;
   }
+  block.style.left = x + "px";
+  block.style.top = y + "px";
 });
 
 // const btn = document.getElementById("btn");
