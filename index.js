@@ -1,11 +1,12 @@
 const root = document.getElementById("root");
-const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+const carBrands = ["Toyota","Ford","BMW","Mercedes","Honda","Audi","Chevrolet"]
 
-const btns = colors.map((color) => {
-  const btn = document.createElement("button");
-  btn.textContent = color;
-  btn.style.backgroundColor = color;
-  return btn;
-});
+const ol = document.createElement('ol');
+const lis = carBrands.map((brand)=>{
+  const li = document.createElement('li')
+  li.textContent = brand;
+  return li;
+})
 
-root.append(...btns);
+ol.append(...lis)
+root.append(ol);
