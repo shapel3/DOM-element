@@ -1,16 +1,32 @@
 const root = document.getElementById("root");
 
+const func = ()=> {
+  console.log('func');
+  
+}
+console.log('start');
+setTimeout(func,0)
+
+setTimeout(()=>{
+  console.log('2');
+  
+},0)
+
+
+console.log('end');
+
+
 //викликає кодз певним інтервалом
 // setInterval(function,timeInMs)
 
-let count = 0 ;
-const idInterval = setInterval(() => {
-  console.log(count);
-  count++;
-  if (count > 10) {
-    clearInterval(idInterval)
-  }
-}, 1000);
+// let count = 0 ;
+// const idInterval = setInterval(() => {
+//   console.log(count);
+//   count++;
+//   if (count > 10) {
+//     clearInterval(idInterval)
+//   }
+// }, 1000);
 
 // const btnSubcsribe = document.createElement('button')
 // btnSubcsribe.textContent  = 'Subscribe now!'
