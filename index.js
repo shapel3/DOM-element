@@ -1,64 +1,51 @@
-const root = document.getElementById("root");
+// Get the first form
+const [form] = document.forms;
 
-const func = ()=> {
-  console.log('func');
-  
-}
-console.log('start');
-setTimeout(func,0)
+// Get the input elements by their name attributes
+const loginInput = form.elements.login; // assuming <input name="login">
+const passwordInput = form.elements.password; // assuming <input name="password">
 
-setTimeout(()=>{
-  console.log('2');
-  
-},0)
+const loginPattern = /^[a-z0-9_-]{3,15}$/;
+const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#!@$ %^&*-]).{8,32}$/;
 
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const login = loginInput.value.trim();
+  const password = passwordInput.value.trim();
 
-console.log('end');
+  if (loginPattern.test(login) && passwordPattern.test(password)) {
+    form.submit();
+    alert("Data was sent, thanks!");
+    return;
+  }
+  alert("Enter right login or password");
+});
 
+// Add focus event to login input
+loginInput.addEventListener("focus", () => {
+  loginInput.style.backgroundColor = "#00ff0029";
+});
 
-//викликає кодз певним інтервалом
-// setInterval(function,timeInMs)
+// Add blur event
+loginInput.addEventListener("blur", () => {
+  const loginValue = loginInput.value.trim();
+  if (loginValue === "") {
+    loginInput.style.backgroundColor = "red";
+  }
+});
 
-// let count = 0 ;
-// const idInterval = setInterval(() => {
-//   console.log(count);
-//   count++;
-//   if (count > 10) {
-//     clearInterval(idInterval)
-//   }
-// }, 1000);
+// Add change event
+loginInput.addEventListener("change", () => {
+  loginInput.style.backgroundColor = "blue";
+});
 
-// const btnSubcsribe = document.createElement('button')
-// btnSubcsribe.textContent  = 'Subscribe now!'
-// root.append(btnSubcsribe)
-
-// //відтермінований запуск
-// //setTimeout(функцію, часВМІЛІСекундах)
-// const idTimeout = setTimeout(
-//   () => {
-//   const removeSubscribe = () => {
-//     document.querySelector(".subscribe").remove();
-//   };
-//   const subscribe = document.createElement("div");
-//   subscribe.classList.add("subscribe");
-//   const close = document.createElement("span");
-//   close.textContent = "X";
-//   close.addEventListener("click", removeSubscribe);
-//   const h2 = document.createElement("h2");
-//   h2.textContent = "Subscribe to our email newsletter";
-//   const form = document.createElement("form");
-//   form.className = "subscribe-form";
-//   const input = document.createElement("input");
-//   const button = document.createElement("button");
-//   button.addEventListener("click", removeSubscribe);
-//   button.textContent = "Subscribe";
-//   subscribe.append(close, h2, form);
-//   form.append(input, button);
-//   root.append(subscribe);
-// }, 5000);
-
-// console.log(idTimeout);
-
-// btnSubcsribe.addEventListener('click',()=>{
-//   clearTimeout(idTimeout)
-// })
+// Add input event
+loginInput.addEventListener("input", () => {
+  const cyrillicPattern = /[А-Яа-я]+/;
+  const loginValue = loginInput.value.trim();
+  if (cyrillicPattern.test(loginValue)) {
+    alert('ви пишите кирилицей')
+    loginInput.style.fontSize = "30px";
+  }
+  loginInput.style.backgroundColor = "yellow";
+});
