@@ -210,9 +210,10 @@
 
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((response)=>response.json())
-.then((data)=>{console.table(data)})
-.catch((err)=>{console.log(err);
+.then((data)=>{console.table(data); console.log(typeof data);
 })
+.catch((err)=>{console.log(err)})
+.finally(()=>{console.log(111)})
 
 
 fetch('https://jsonplaceholder.typicode.com/users/1')
